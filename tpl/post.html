@@ -1,0 +1,5 @@
+<div class="entry"><font size=+2><a href="index.php?p=<?=$post['id'];?>"><?=$post['title'];?></a></font><br> <?=$post['date'];?> <?=@$post['edit'];?> <?=@$post['del'];?><br>
+<hr size=1 color=#E6E6E6>
+<div style="margin: 10 10 10 10;"><?=$post['text'];?></div>
+<hr size=1 color=#E6E6E6>
+<?if($_s['comments']) {?><a href="index.php?p=<?=$post['id'];?>#cmt">комментарии</a> <?if((@$post['comtn']-2)>0){echo @$post['comtn']-2;};?> <?}?></div>

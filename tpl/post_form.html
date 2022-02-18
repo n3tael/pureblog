@@ -1,0 +1,8 @@
+<form method="post">
+<script src="//js.nicedit.com/nicEdit-latest.js" type="text/javascript"></script>
+<script type="text/javascript">bkLib.onDomLoaded(nicEditors.allTextAreas);</script>
+						
+<input type="hidden" name="act" value="<?=$_v['act'];?>"><input type="hidden" name="p" value="<?=@$_v['p'];?>"></div>
+<input type="text" name="title" style="width:95%;" value="<?=$post['title'];?>">
+<textarea name="text" id="text" style="width:95%; height:300px"><?=@$post['text'];?></textarea><br>
+<div align="center"><input name="msubmit" type="submit" value=" Опубликовать "></div>

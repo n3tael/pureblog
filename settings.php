@@ -1,0 +1,1 @@
+<?$_s['pass']= '123';$_s['blogname']= 'PureBlog';?>

@@ -1,0 +1,28 @@
+<html>
+<head>
+<title><?=$_s['blogname'];?><?=$pages_link;?></title>
+<style>
+body{background-color:#bcbcbc;font-family: Arial,sans-serif;}
+.osnova{background-color:#ffffff;border:1px solid #919b9c;border-radius:8px;}
+a{text-decoration:none;}
+a:hover{text-decoration:underline;}
+h2 {margin-left:12px;}
+.menu{border:1px solid #bcbcbc;padding:4px;color:black;height:100%;border-radius:4px;}
+.menu img{vertical-align:middle;}
+.entryset img{vertical-align:middle;}
+.entry{border:1px solid #bcbcbc;padding:4px;border-radius:4px;}
+.entryset{border:1px solid #bcbcbc;padding:8px;margin-left:12px;margin-right:12px;border-radius:4px;}
+.success{border:1px solid #b6d7a8;background-color:#ddf3d7;padding: 16px;margin-left:12px;margin-right:12px;margin-bottom: 8px;border-radius:4px;}
+td {padding:5px;vertical-align:top;border-radius:4px;}
+</style>
+</head>
+<body>
+<body>
+<center>
+<table class="osnova" width="600px;">
+    <tr>
+        <td colspan="2"><font style="padding:8px;"size="+6"><b><?=$_s['blogname'];?></b></font></td>
+    </tr>
+<tr>
+        <td width="160px" style="border:1px solid #919b9c;"><div cal><a href=index.php><img src='tpl/img/home.gif'> Главная</a><br><?if(is_admin()){print " <a href=?act=nedit><img src='tpl/img/add.gif'> Новая запись</a><br>";}?><?if(is_admin()){print " <a href=?act=settings><img src='tpl/img/settings.gif'> Настройки</a><br>";}?><?if(is_admin()){print "<a href=?act=login><img src='tpl/img/logout.gif'> Выход</a>";}else{ print "<a href=?act=login><img src='tpl/img/login.gif'> Вход</a>";}?></td>
+        <td style="border:1px solid #919b9c;">

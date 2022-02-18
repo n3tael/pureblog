@@ -1,0 +1,33 @@
+<h2 style="margin-top: 10px;">Настройки</h2>
+<? 
+if ($_SERVER['REQUEST_METHOD'] == "POST")
+{
+    $fp = fopen('settings.php', 'w');
+	fwrite($fp, "<?");
+	$pass = $_POST['pass1'];
+	$bn = $_POST['blogname'];
+fwrite($fp, "\$_s['pass']= '$pass';");
+fwrite($fp, "\$_s['blogname']= '$bn';");
+fwrite($fp, "?>");
+fclose($fp);
+    echo "<div class='success'><b>Успех!</b><br>Изменения были успешно сохранены.</div>";
+}
+?>
+<div class="entryset">
+	<font size="+2"><img src="tpl/img/serverinfo.gif"> Техническая информация</font>
+<hr size=1 color=#E6E6E6>
+	<p><b>Название блога: </b><?=$_s['blogname'];?></p>
+	<p><b>Версия PureBlog: </b>v<?=$_s['ver'];?></p>
+	<p><b>Версия PHP: </b><? echo phpversion(); ?></p>
+</div><br>
+<div class="entryset">
+	<font size="+2"><img src="tpl/img/serversettings.gif"> Настройки</font>
+<hr size=1 color=#E6E6E6>
+<form method=POST>
+	<p><b>Изменить название блога: </b><input type=text placeholder='Новое название' minlength="1" value="<?=$_s['blogname'];?>" name=blogname></center></p>
+	<p><b>Изменить пароль: </b><input type=text value="<?=$_s['pass'];?>" placeholder='Новый Пароль' minlength="3" name=pass1></p>
+	<hr size=1 color=#E6E6E6>
+	<button>Сохранить</button>
+	</form>
+</div>
+<br>
